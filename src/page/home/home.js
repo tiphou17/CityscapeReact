@@ -1,1 +1,0 @@
-// import slider.js bloc1.js etc
