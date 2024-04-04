@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from
 
 function PropertySection() {
     return (
@@ -20,7 +21,6 @@ function PropertySection() {
                                     </span>
                                 </div>
                             </div>
-                            {/* Ajoutez le reste des éléments de formulaire de filtre ici */}
                         </div>
                     </form>
                     <div className="property-filter__bottom flx-between gap-2">
@@ -52,12 +52,10 @@ function PropertySection() {
                     </div>
                 </div>
                 <div className="list-grid-item-wrapper show-two-item row gy-4">
-                    {/* Ajoutez le contenu des éléments de la liste ici */}
                 </div>
             </div>
             <nav aria-label="Page navigation example">
                 <ul className="pagination common-pagination">
-                    {/* Ajoutez le contenu de la pagination ici */}
                 </ul>
             </nav>
         </section>
