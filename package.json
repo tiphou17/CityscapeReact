@@ -12,6 +12,7 @@
     "expo": "~50.0.14",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
+    "react-inspector": "^6.0.2",
     "react-native": "0.73.6"
   },
   "devDependencies": {
