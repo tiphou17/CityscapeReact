@@ -1,0 +1,23 @@
+/* Font Family*/
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Vidaloka&display=swap");
+
+/* start global rules  */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Open sans", sans-serif;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
