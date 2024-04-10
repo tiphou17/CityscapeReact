@@ -1,12 +1,17 @@
-import PropertyList from "../components/PropertyList/PropertyList";
+import PropertyList from "../../components/PropertyList/PropertyList";
+import Footer from "../../components/Footer/Footer";
+import { ScrollView } from 'react-native';
 
-const PropertyList = ()=> {
+const PropertyListPage = ()=> {
 
     return (
+        <ScrollView>
         <PropertyList />
+        <Footer />
+        </ScrollView>
     );
 
 };
 
-export default PropertyList;
+export default PropertyListPage;
 
