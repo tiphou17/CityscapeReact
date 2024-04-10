@@ -3,7 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import {NavigationContainer} from '@react-navigation/native';
 
 
-import Footer from "./src/components/Footer/Footer";
+import PropertyListPage from "./src/pages/Property/PropertyList";
 
 
 const Stack = createStackNavigator();
@@ -12,8 +12,7 @@ export default function App() {
   return (
   <NavigationContainer>
     <Stack.Navigator>
-
-      <Stack.Screen name="Footer" component={Footer} />
+      <Stack.Screen name="PropertyListPage" component={PropertyListPage} />
     </Stack.Navigator>
     </NavigationContainer>
   );
