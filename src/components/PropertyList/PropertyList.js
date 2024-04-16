@@ -2,6 +2,9 @@ import React from 'react';
 import { View, Text, TextInput, ScrollView, TouchableOpacity, Image} from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useState } from "react";
+import { Linking } from "react-native";
+import { UseSelector, useSelector } from "react-redux";
 
 const PropertyComponent = () => {
 
@@ -16,7 +19,7 @@ const PropertyComponent = () => {
                           </TouchableOpacity>
                         </View>
                         <View style={{ padding: 10 }}>
-                          <Text style={{ fontSize: 18, fontWeight: 'bold' }}>Type de maison</Text>
+                          <Text style={{ fontSize: 18, fontWeight: 'bold' }}> {property.propHousingType} </Text>
                           <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 5 }}>
                             <Text>8 Beds</Text>
                             <Text>5 Baths</Text>
