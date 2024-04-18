@@ -4,6 +4,7 @@ import {Picker} from '@react-native-picker/picker';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import GLOBALS from "../Common/Globals"
+import { LogBox } from 'react-native';
 
 
 const PropertyComponent = () => {
@@ -14,6 +15,7 @@ const PropertyComponent = () => {
 
     useEffect(()=>{
         fetchProperties();
+        LogBox.ignoreLogs(['VirtualizedLists should never be nested']);
     },[]);
 
     const fetchProperties = () => {
