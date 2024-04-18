@@ -24,6 +24,11 @@ export default function NavBar() {
                 color="#F4821E"
                 onPress={() => navigation.navigate('Contact')}
             />
+            <Button
+                            title="PropertyDetails"
+                            color="#F4821E"
+                            onPress={() => navigation.navigate('PropertyDetailsPage')}
+                        />
         </View>
     );
 }

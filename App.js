@@ -9,21 +9,42 @@ import PropertyList from './src/pages/Property/PropertyList';
 import PropertyDetailsPage from "./src/pages/propertyDetails/propertyDetails";
 import Contact from './src/pages/contact';
 import Stylesheets from './src/styles/style';
+import PropertiesService from './src/Services/PropertiesServices';
+import PropertiesReducer from './src/Reducers/PropertiesReducer';
+import { Provider } from "react-redux";
+//import {  } from "native-base";
+import { NativeBaseProvider, configureStore } from "@reduxjs/toolkit";
+import * as SplashScreen from 'expo-splash-screen';
+import * as Sentry from '@sentry/react-native';
+
+//console.log(PropertiesService.getProperties())
+
+// Keep the splash screen visible while we fetch resources
+//SplashScreen.preventAutoHideAsync();
+
+
+
+//PropertiesService.getProperties();
 
 const Stack = createStackNavigator();
 
 
 const App = () => {
+    setTimeout(() => {
+            SplashScreen.hideAsync();
+        }, 3000);
+
   return (
 
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home}/>
         <Stack.Screen name="Properties" component={PropertyList}/>
-        <Stack.Screen name="PropertyDetails" component={PropertyDetailsPage}/>
+        <Stack.Screen name="PropertyDetailsPage" component={PropertyDetailsPage}/>
         <Stack.Screen name="Contact" component={Contact}/>
       </Stack.Navigator>
     </NavigationContainer>
+
   );
 }
 

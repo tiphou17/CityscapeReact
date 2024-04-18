@@ -8,6 +8,7 @@ import Category from "../../components/propertyDetails/category";
 import RecentPost from "../../components/propertyDetails/recentPost";
 import Properties from "../../components/propertyDetails/properties";
 import Breadcrumb from "../../components/partials/breadcrumb";
+import Footer from "../../components/Footer/Footer";
 // import Login from "../../components/home/test";
 
 
@@ -16,7 +17,7 @@ import Breadcrumb from "../../components/partials/breadcrumb";
 const PropertyDetailsPage = () => {
     return (
 <>
-{/*     <Login /> */}
+
     <Breadcrumb title="Property Details"/>
 
     <ScrollView>
@@ -35,7 +36,7 @@ const PropertyDetailsPage = () => {
         <Properties />
 
 {/* fin sép 2 */}
-
+    <Footer />
     </ScrollView>
 
     </>
