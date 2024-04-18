@@ -1,14 +1,18 @@
 import PropertyList from "../../components/PropertyList/PropertyList";
 import Footer from "../../components/Footer/Footer";
-import { ScrollView } from 'react-native';
+import { View } from 'react-native';
+
+
+
 
 const PropertyListPage = ()=> {
 
+
     return (
-        <ScrollView>
+        <View>
         <PropertyList />
         <Footer />
-        </ScrollView>
+        </View>
     );
 
 };

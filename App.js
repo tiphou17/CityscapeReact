@@ -9,12 +9,12 @@ import PropertyList from './src/pages/Property/PropertyList';
 import PropertyDetailsPage from "./src/pages/propertyDetails/propertyDetails";
 import Contact from './src/pages/contact';
 import Stylesheets from './src/styles/style';
-import PropertiesService from './src/Service/PropertyService';
+
 
 
 const Stack = createStackNavigator();
 
-PropertiesService.getProperties();
+
 
 const App = () => {
   return (

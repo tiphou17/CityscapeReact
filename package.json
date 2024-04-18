@@ -24,6 +24,7 @@
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "expo": "~50.0.14",
+    "expo-splash-screen": "^0.26.4",
     "expo-status-bar": "~1.11.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
