@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, ScrollView, TouchableOpacity, Image, FlatList} from 'react-native';
+import { View, Text, TextInput, ScrollView, TouchableOpacity, Image, FlatList, SafeAreaView } from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
@@ -63,13 +63,77 @@ const PropertyComponent = () => {
         )
     }
     return (
-    <View >
-            <FlatList
-                data={getProperties}
-                keyExtractor={(item) => item.id.toString()}
-                renderItem={test}
-            />
+    <ScrollView style={{ backgroundColor: '#f0f0f0' }}>
+            <View style={{ paddingVertical: 120, paddingHorizontal: 20 }}>
+              <View style={{ marginBottom: 20 }}>
+                  <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 20 }}>
+                    <View style={{ flex: 1, marginRight: 10 }}>
+                      <View style={{ flexDirection: 'row', alignItems: 'center', borderWidth: 1, borderColor: '#ccc', borderRadius: 5 }}>
+                        <Picker
+                          style={{ flex: 1, height: 40, color: '#333' }}
+                          selectedValue={'Status'}
+                          onValueChange={(itemValue, itemIndex) => {}}
+                        >
+                          <Picker.Item label="Status" value="Status" enabled={false} />
+                          <Picker.Item label="All" value="All" />
+                          <Picker.Item label="Buy" value="Buy" />
+                          <Picker.Item label="Rent" value="Rent" />
+                        </Picker>
+                        <Image style={{ width: 20, height: 20, marginRight: 10 }} source={{ uri: 'your_image_url' }} />
+                      </View>
+                    </View>
+                    {/* Other columns go here */}
+                  </View>
+                  <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                    <Text style={{ fontSize: 18, color: '#333' }}>Showing 1-10 of 23</Text>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                      <View style={{ flexDirection: 'row', alignItems: 'center', marginRight: 4 }}>
+                        <TouchableOpacity style={{ backgroundColor: '#ccc', paddingHorizontal: 10, paddingVertical: 5, borderRadius: 5 }}>
+                          <Text>Grid</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{ backgroundColor: '#ccc', paddingHorizontal: 10, paddingVertical: 5, borderRadius: 5 }}>
+                          <Text>List</Text>
+                        </TouchableOpacity>
+                      </View>
+                      <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <Text style={{ fontSize: 18, color: '#333' }}>Sort by:</Text>
+                        <Picker
+                          style={{ height: 40, color: '#333', backgroundColor: 'transparent' }}
+                        >
+                          <Picker.Item label="Newest" value="Newest" />
+                          <Picker.Item label="Best Seller" value="Best Seller" />
+                          <Picker.Item label="Best Match" value="Best Match" />
+                          <Picker.Item label="Low Price" value="Low Price" />
+                          <Picker.Item label="High Price" value="High Price" />
+                        </Picker>
+                      </View>
+                    </View>
+                  </View>
+              </View>
+                <View >
+                      <FlatList
+                         data={getProperties}
+                          keyExtractor={(item) => item.id.toString()}
+                          renderItem={test}
+                      />
+                            </View>
+              <View>
+                {/* Pagination */}
+                <View style={{ flexDirection: 'row', justifyContent: 'center', marginTop: 20 }}>
+                  <TouchableOpacity style={{ backgroundColor: '#ccc', paddingHorizontal: 10, paddingVertical: 5, borderRadius: 5 }}>
+                    <Text>1</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={{ backgroundColor: '#ccc', paddingHorizontal: 10, paddingVertical: 5, borderRadius: 5 }}>
+                    <Text>2</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity style={{ backgroundColor: '#ccc', paddingHorizontal: 10, paddingVertical: 5, borderRadius: 5 }}>
+                    <Text>3</Text>
+                  </TouchableOpacity>
+                  {/* Add more page buttons as needed */}
+                </View>
+              </View>
             </View>
+          </ScrollView>
     )
 };
 
