@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, TextInput, ScrollView, TouchableOpacity, Image, FlatList, ActivityIndicator, StatusBar } from 'react-native';
+import { View, Text, TextInput, ScrollView, TouchableOpacity, Image, FlatList, Button, ActivityIndicator, StatusBar} from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
-import GLOBALS from "../Common/Globals"
+import GLOBALS from "../../Common/Globals"
+import * as SplashScreen from 'expo-splash-screen';
+import { useNavigation ,  NavigationContainer }  from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { LogBox } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 
+SplashScreen.preventAutoHideAsync();
 const PropertyComponent = () => {
-
     const navigation = useNavigation();
 
     const [getProperties, setProperties]= useState([]);
@@ -78,7 +80,16 @@ const PropertyComponent = () => {
                              {/* Location information */}
                              </View>
                              <TouchableOpacity style={{ backgroundColor: '#ccc', padding: 10, borderRadius: 5, marginTop: 10, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}} onPress={() => navigation.navigate('PropertyDetails')} >
-                             <Text style={{ fontWeight: 'bold', color: '#333' }}>Book Now</Text>
+                             <Button
+                                                            title="Book Now"
+                                                            itemId= {item.id}
+                                                            color="#F4821E"
+                                                            onPress={() => navigation.navigate(
+                                                                'PropertyDetails',
+
+                                                                {itemId: item.id}
+                                                                )}
+                                                        />
                     </TouchableOpacity>
                     </View>
                 </View>

@@ -7,10 +7,13 @@ import {
   PROPERTY_USREALESTATE,
   SEARCH_LAT_LNG,
 } from "../Actions/types";
+import PropertiesService from '../Services/PropertiesServices';
+
+
 
 const INITIAL_STATE = {
-  list: [],
-  listFiltered: [],
+  list:[] ,
+  listFiltered: [] ,
   propertiesUSRealEstate: [],
   propertyUSRealEstate: {},
   propertyId: "",
@@ -22,8 +25,12 @@ const INITIAL_STATE = {
  };
 
 export default (state = INITIAL_STATE, action) => {
+    properties = PropertiesService.getProperties()
+    console.log(properties)
+//mettre un console.log de action pour voir ce qu'il y a dedans
     switch (action.type) {
         case PROPERTIES_FILTERED:
+
             return {
                 ...state,
                 listFiltered: action.payload,
@@ -33,7 +40,7 @@ export default (state = INITIAL_STATE, action) => {
         case PROPERTIES_FETCH_SUCCESS:
             return {
                 ...state,
-                list: action.payload,
+                list: PropertiesService.getProperties(),
                 listFiltered: action.payload,
                 loading: false,
             };

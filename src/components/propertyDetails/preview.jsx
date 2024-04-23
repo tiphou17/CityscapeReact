@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { SvgUri, Svg, Path, Defs, LinearGradient, Stop } from 'react-native-svg';
 
-const Preview = () => {
+const Preview = ({property}) => {
     return (
             <View style={styles.propertyDetailsItem}>
                 <Text style={styles.title}>Preview</Text>
@@ -28,8 +28,8 @@ const Preview = () => {
 {/*                             source={require('../../../assets/icons/amenities1.svg')} */}
 {/*                           /> */}
                                 <View style={styles.amenitiesContentInner}>
-                                    <Text style={styles.text}>Room</Text>
-                                    <Text style={styles.subtitle}>4 Room</Text>
+                                    <Text style={styles.text}>  Room</Text>
+                                    <Text style={styles.subtitle}> {property.propNbSpaces} Room</Text>
                                 </View>
                             </View>
                         </View>
@@ -38,7 +38,7 @@ const Preview = () => {
                             <Image source={require('../../../assets/images/icons/amenities2.svg')} style={styles.icon} />
                                 <View style={styles.amenitiesContentInner}>
                                     <Text style={styles.text}>Bed</Text>
-                                    <Text style={styles.subtitle}>3 Beds</Text>
+                                    <Text style={styles.subtitle}>{property.propNbBeds} Beds</Text>
                                 </View>
                             </View>
                         </View>
@@ -47,7 +47,7 @@ const Preview = () => {
                                 <Image source={require('../../../assets/images/icons/amenities3.svg')} style={styles.icon} />
                                 <View style={styles.amenitiesContentInner}>
                                     <Text style={styles.text}>Bath</Text>
-                                    <Text style={styles.subtitle}>2 Baths</Text>
+                                    <Text style={styles.subtitle}>{property.propNbBaths} Baths</Text>
                                 </View>
                             </View>
                         </View>
@@ -58,7 +58,7 @@ const Preview = () => {
                                 <Image source={require('../../../assets/images/icons/amenities4.svg')} style={styles.icon} />
                                 <View style={styles.amenitiesContentInner}>
                                     <Text style={styles.text}>Space</Text>
-                                    <Text style={styles.subtitle}>3 Space</Text>
+                                    <Text style={styles.subtitle}>{property.propNbSpaces} Space</Text>
                                 </View>
                             </View>
                         </View>
@@ -67,7 +67,7 @@ const Preview = () => {
                                 <Image source={require('../../../assets/images/icons/amenities5.svg')} style={styles.icon} />
                                 <View style={styles.amenitiesContentInner}>
                                     <Text style={styles.text}>Size</Text>
-                                    <Text style={styles.subtitle}>1020 sqft</Text>
+                                    <Text style={styles.subtitle}>{property.propSqm} m2</Text>
                                 </View>
                             </View>
                         </View>
@@ -76,7 +76,7 @@ const Preview = () => {
                                    <Image source={require('../../../assets/images/icons/amenities6.svg')} style={styles.icon} />
                                 <View style={styles.amenitiesContentInner}>
                                     <Text style={styles.text}>Property Type</Text>
-                                    <Text style={styles.subtitle}>Apartment</Text>
+                                    <Text style={styles.subtitle}> {property.name}</Text>
                                 </View>
                             </View>
                         </View>
