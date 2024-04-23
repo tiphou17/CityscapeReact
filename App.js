@@ -10,7 +10,10 @@ import PropertyDetailsPage from "./src/pages/propertyDetails/propertyDetails";
 import Contact from './src/pages/contact';
 import Stylesheets from './src/styles/style';
 
+
+
 const Stack = createStackNavigator();
+
 
 
 const App = () => {

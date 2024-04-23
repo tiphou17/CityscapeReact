@@ -9,9 +9,6 @@
     "web": "expo start --web"
   },
   "dependencies": {
-
-    "@react-native-picker/picker": "^2.7.2",
-    "bootstrap": "^5.3.3",
     "@expo/metro-runtime": "~3.1.3",
     "@fortawesome/fontawesome-free": "^6.5.2",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -20,11 +17,14 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@fortawesome/react-native-fontawesome": "^0.3.0",
+    "@react-native-picker/picker": "^2.7.2",
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/native-stack": "^6.9.26",
     "@react-navigation/stack": "^6.3.29",
-
+    "axios": "^1.6.8",
+    "bootstrap": "^5.3.3",
     "expo": "~50.0.14",
+    "expo-splash-screen": "^0.26.4",
     "expo-status-bar": "~1.11.1",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.4",
@@ -32,16 +32,14 @@
     "react-dom": "18.2.0",
     "react-inspector": "^6.0.2",
     "react-native": "0.73.6",
-
     "react-native-gesture-handler": "~2.14.0",
+    "react-native-pagination": "^1.5.5",
     "react-native-safe-area-context": "4.8.2",
     "react-native-screens": "~3.29.0",
-    "react-native-web": "~0.19.6"
-
-  
-    "sort-by": "^1.2.0",
-    "react-native-svg": "14.1.0"
-
+    "react-native-svg": "14.1.0",
+    "react-native-web": "~0.19.6",
+    "react-redux": "^9.1.1",
+    "sort-by": "^1.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
