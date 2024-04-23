@@ -18,16 +18,11 @@ import { NativeBaseProvider, configureStore } from "@reduxjs/toolkit";
 import * as SplashScreen from 'expo-splash-screen';
 import * as Sentry from '@sentry/react-native';
 
-//console.log(PropertiesService.getProperties())
 
 // Keep the splash screen visible while we fetch resources
-//SplashScreen.preventAutoHideAsync();
-
-
-
-//PropertiesService.getProperties();
-
+SplashScreen.preventAutoHideAsync();
 const Stack = createNativeStackNavigator();
+
 
 
 const App = () => {

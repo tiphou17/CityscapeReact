@@ -18,6 +18,7 @@ const PropertyListPage = () => {
                 }, 3000);
 
 
+
     return (
         <View>
                 <PropertyComponent />
