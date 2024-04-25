@@ -23,8 +23,8 @@ import registerNNPushToken from 'native-notify';
 SplashScreen.preventAutoHideAsync();
 const Stack = createNativeStackNavigator();
 
-
 export default function App() {
+
      registerNNPushToken(20957, 'uLV3sJjHU70dylWcJSefsv');
          setTimeout(() => {
                  SplashScreen.hideAsync();
