@@ -17,32 +17,33 @@ import { Provider } from "react-redux";
 import { NativeBaseProvider, configureStore } from "@reduxjs/toolkit";
 import * as SplashScreen from 'expo-splash-screen';
 import * as Sentry from '@sentry/react-native';
-
+import registerNNPushToken from 'native-notify';
 
 // Keep the splash screen visible while we fetch resources
 SplashScreen.preventAutoHideAsync();
 const Stack = createNativeStackNavigator();
 
 
+export default function App() {
+     registerNNPushToken(20957, 'uLV3sJjHU70dylWcJSefsv');
+         setTimeout(() => {
+                 SplashScreen.hideAsync();
+             }, 3000);
 
-const App = () => {
-    setTimeout(() => {
-            SplashScreen.hideAsync();
-        }, 3000);
+       return (
 
-  return (
+         <NavigationContainer>
+           <Stack.Navigator>
+             <Stack.Screen name="Home" component={Home}/>
+             <Stack.Screen name="Properties" component={PropertyList} />
+             <Stack.Screen name="PropertyDetails" component={PropertyDetailsPage}/>
+             <Stack.Screen name="Contact" component={Contact}/>
+           </Stack.Navigator>
+         </NavigationContainer>
 
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home}/>
-        <Stack.Screen name="Properties" component={PropertyList} />
-        <Stack.Screen name="PropertyDetails" component={PropertyDetailsPage}/>
-        <Stack.Screen name="Contact" component={Contact}/>
-      </Stack.Navigator>
-    </NavigationContainer>
-
-  );
+       );
 }
 
-export default App;
+
+
 
